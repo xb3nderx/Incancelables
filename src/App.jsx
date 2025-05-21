@@ -15,7 +15,7 @@ import Contacto from "./components/Contacto";
 import ProductoDetalle from "./components/ProductoDetalle";
 import Admin from "./components/Admin";
 import Login from "./components/Login";
-import ProductosContainer1 from "./components/Ale";
+
 
 function App() {
   const [productosCarrito, setProductosCarrito] = useState([]);
@@ -60,7 +60,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/Incancelables">
       <div>
         <Nav productosCarrito={productosCarrito} />
         <Routes>
@@ -102,6 +102,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+
   );
 }
 
