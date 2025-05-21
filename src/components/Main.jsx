@@ -1,8 +1,8 @@
 function Main() {  
     return (  
         <main style={{ padding: "20px" }}>  
-            <h2>Tanta Musica Que No Puede Ser Callada</h2>  
-            <p>Volviendo a las raices del rock y sus derivados, con una vuelta de tuerca</p>  
+            <h2>MUSICA QUE NO PODRA SER SILENCIADA</h2>  
+            <p>Un paso atràs para estar en la vanguardia</p>  
         </main>  
     );  
 }  
