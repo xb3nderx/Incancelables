@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 function Nav({ productosCarrito }) {
   return (
-    <nav style={{ backgroundColor: "#333", color: "white", padding: "10px", width: "100%" }}>
-      <ul style={{ listStyle: "none", display: "flex", justifyContent: "space-around", margin: 0, padding: 0 }}>
+    <nav style={{ backgroundColor: "#333", color: "white",  width: "100%", height: "3rem",fontSize: "1.5rem"}}>
+      <ul style={{ listStyle: "none", display: "flex", justifyContent: "space-around", margin: 0, padding: 0, alignItems: "center" }}>
         <li>
           {/* <NavLink to="/" style={({ isActive }) => linkStyle(isActive)}>Inicio</NavLink> */}
           <NavLink to="/" end style={({ isActive }) => linkStyle(isActive)}>Inicio</NavLink>
@@ -39,8 +39,18 @@ function linkStyle(isActive) {
     color: "white",
     textDecoration: "none",
     backgroundColor: isActive ? "#e07e0ee6" : "transparent",
-    padding: "5px 10px",
-    borderRadius: "5px"
+    padding: "0.4rem 0.8rem",       // un poco más de padding vertical y horizontal
+    display: "flex",                // esto permite usar alignItems
+    alignItems: "center",           // centra verticalmente el contenido dentro del enlace
+    height: "100%",                 // asegura que el fondo cubra toda la altura del nav
+    borderRadius: "5px",
+    boxSizing: "border-box"         // evita que padding rompa el layout
+    // color: "white",
+    // textDecoration: "none",
+    // backgroundColor: isActive ? "#e07e0ee6" : "transparent",
+    // padding: "0.2rem",
+    // alignItems: "center",
+    // borderRadius: "5px"
   };
 }
 

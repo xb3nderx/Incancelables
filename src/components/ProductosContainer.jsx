@@ -31,7 +31,7 @@ function ProductosContainer(){
         return <p>{error}</p>;
     }else{
         return(
-            <div className="productos-conteiner">
+            <div className="productos-container">
                 {productos.map((producto) => (
                     <Card
                         producto={producto}

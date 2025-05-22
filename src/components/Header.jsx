@@ -11,13 +11,13 @@ function Header() {
             color: "white",
             position: 'relative', // importante para posicionar el logo absoluto dentro
             width: '100%',
-            maxWidth: '100%',
+            // maxWidth: '100%',
         }}>  
             <img 
                 src={incanHero} 
                 alt="Logo" 
                 style={{width: '100%', height: 'auto', display: 'block', opacity: 0.59,
-                        mixBlendMode: 'luminosity'}} 
+                        mixBlendMode: 'luminosity', alignContent: 'center'}} 
             />
              
     

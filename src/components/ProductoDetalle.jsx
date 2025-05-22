@@ -68,3 +68,5 @@ function ProductoDetalle({ funcionCarrito }) {
 }
 
 export default ProductoDetalle;
+
+
