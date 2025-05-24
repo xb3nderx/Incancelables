@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useContext} from "react";
+import { CarritoContext } from "../contexts/CarritoContext.jsx";
 
+function Nav() {
+  const {productosCarrito} = useContext(CarritoContext);
 
-function Nav({ productosCarrito }) {
   return (
     <nav style={{ backgroundColor: "#333", color: "white",  width: "100%", height: "3rem",fontSize: "1.5rem"}}>
       <ul style={{ listStyle: "none", display: "flex", justifyContent: "space-around", margin: 0, padding: 0, alignItems: "center" }}>

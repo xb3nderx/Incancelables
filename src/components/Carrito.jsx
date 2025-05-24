@@ -1,9 +1,12 @@
 import "../styles/Carrito.css"
-import { useEffect, useState } from "react";
+import { useContext} from "react";
 import CarritoCard from "./CarritoCard.jsx";
 import { Navigate } from "react-router-dom";
+import { CarritoContext } from "../contexts/CarritoContext.jsx";
 
-export default function Carrito({productosCarrito, funcionBorrar, usuarioLogeado}) {
+export default function Carrito({usuarioLogeado}) {
+    const {productosCarrito, vaciarCarrito, borrarProductoCarrito} = useContext(CarritoContext);
+    
     console.log("Productos: " + productosCarrito)
 
     const total = productosCarrito.reduce(
@@ -11,7 +14,7 @@ export default function Carrito({productosCarrito, funcionBorrar, usuarioLogeado
     )
 
     function funcionDisparadora(id){
-        funcionBorrar(id)
+        borrarProductoCarrito(id)
     }
 
     console.log("Total: " + total)
@@ -24,6 +27,7 @@ export default function Carrito({productosCarrito, funcionBorrar, usuarioLogeado
 
     return(
         <div className="carrito-conteiner">
+            <button onClick={vaciarCarrito}>Vaciar Carrito</button>
             <div className="carrito-titulos" >
                 <h2 className="carrito-titulo-producto"> Producto </h2>
                 <h2 className="carrito-titulo-descripcion">Descripción</h2>
