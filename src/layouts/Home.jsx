@@ -1,13 +1,13 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Main from "../components/Main";
+import MainBody from "../components/MainBody";
 import "../styles/Inicio.css";
 
 function Home() {
   return (
     <div className="inicio">
       <Header />
-      <Main />
+      <MainBody />
       <Footer />
     </div>
   );

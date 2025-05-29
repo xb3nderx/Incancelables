@@ -3,8 +3,10 @@ import { useContext} from "react";
 import CarritoCard from "./CarritoCard.jsx";
 import { Navigate } from "react-router-dom";
 import { CarritoContext } from "../contexts/CarritoContext.jsx";
+import { useAuthContext } from "../contexts/AuthContext.jsx";
 
-export default function Carrito({usuarioLogeado}) {
+export default function Carrito() {
+    const {user} = useAuthContext()
     const {productosCarrito, vaciarCarrito, borrarProductoCarrito} = useContext(CarritoContext);
     
     console.log("Productos: " + productosCarrito)
@@ -19,7 +21,7 @@ export default function Carrito({usuarioLogeado}) {
 
     console.log("Total: " + total)
 
-    if(!usuarioLogeado){
+    if(!user){
         return(
             <Navigate to="/login" replace/>
         )
