@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.header {
+    background-color: #51567D;           
+    /* text-align: center;  */
+    color: white;
+    position: relative; 
+    width: 100%;
+}
+
+.incanHero {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    opacity: 0.59;
+    mix-blend-mode: luminosity; 
+    align-content: center;
+}
+
+.incanLogo {
+    position: absolute;
+    top: 80%;         /*ajustaparamoververticalmente*/
+    left: 50%;       /*ajustaparacentrarhorizontalmente*/
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    height:10rem;
+    width:auto;
+    pointer-events: none;/*opcional,paraqueclicspasenalaimagendeabajo*/
+
+}
+
+.main{     
+  flex: 1; /* Toma todo el espacio posible */
+  padding: "20px"
+}
+
+
+.footer {
+    background-color: #e07e0ee6; 
+    padding: 10px; 
+    text-align: center; 
+    /* margin-top: 30px; */
+    color: black; 
+}
